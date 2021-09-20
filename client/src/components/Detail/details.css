@@ -1,0 +1,75 @@
+.flecha{
+	color: #C01306;
+	padding-right: 550px;
+}
+
+.recipe-container {
+	padding: 0 2rem;
+	background-color: #ffffff;
+	padding-bottom: 50px;
+}
+
+.container-div {
+	background-color: #ebebeb;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%;
+	background-color: #ffffff;
+	margin: 60px 0px 0px 25%;
+	color: rgb(122, 122, 122);
+	font-size: 25px;
+	border-radius: 7px;
+	border:solid rgba(160, 160, 160, 0.2);
+	box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5);
+    list-style: none;
+	padding: 25px;
+}
+
+.detail-title {
+	text-align: center;
+	padding-top: 25px;
+	font-family: 'Rubik';
+	font-size: 2.5rem;
+	color: #181717;
+	margin: 0.5rem 0;
+}
+
+.detail-container img {
+	max-width:  25vw;
+	margin-top: 1.5rem;
+	margin-left: 17px;
+}
+
+.detail-scores {
+	padding-top: 10px;
+	font-size: 1.5rem;
+	color: #541509;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.detail-recipe h2 {
+	font-family: 'Poppins';
+	text-align: center;
+	color: #86190A;
+	font-size: 1.8rem;
+	padding-top: 20px;
+	font-style: italic;
+}
+
+.detail-diets h2 {
+	font-family: 'Poppins';
+	color:  #DAA381;
+	font-size: 1.3rem;
+	text-align: center;
+	display: inline;
+}
+
+.detail-recipe p {
+	padding-top: 10px;
+	font-family: 'Poppins';
+	text-align: justify;
+	font-size: 1rem;
+	color: #383838;
+}

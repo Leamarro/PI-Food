@@ -1,0 +1,126 @@
+.caja{
+  background-image:url("https://jacomeyortiz.com/wp-content/uploads/2019/02/wood-2142241_1920.jpg");
+}
+
+.filter-sort {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #DAA381;
+    height: 10vh;
+  }
+  
+  .filter-sort span {
+    margin-right: 3px;
+  }
+
+  .filter-sort select {
+    height: 4vh;
+    margin-right: 1.5rem;
+    height: 2.68vw;
+    background-color: #D9BAB8;
+    border-radius: 10px;
+  }
+  
+  .filter-select {
+    width: 15vw ;
+    height: 3vw ;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+  
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 10px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 10;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    color: #000000;
+    outline: none;
+    
+  }
+  
+  select::-ms-expand{
+    display: none;
+}
+select:hover{
+    border: 1px solid #541509;
+}
+select option{
+    background-color:white;
+}
+
+.selected{
+    display: none;
+}
+
+  .recipes-home {
+    display: grid;
+    grid-template-columns: repeat(3, 450px);
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-left: -60px;
+  }
+
+  @media (max-width: 768px) {
+    .recipes-home{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .pagination {
+    margin-top: 10px;
+    display: flex;
+    position: absolute;
+    transform: translate(250%,300%);
+  }
+
+  .num-page {
+    font-size: 2rem;
+    color: #5c595b;
+    padding-right: 45px;
+    padding-left: 45px;
+  }
+  
+  .div_btn {
+		display: flex;
+	}
+		.btn_page {
+      font-family: 'Rubik', sans-serif;
+      font-weight: 500;
+      background-color:  #800a05;
+      border-radius: 10px;
+      cursor: pointer;
+      color: #ffffff;
+      font-size: 12px;
+      width: 55px;
+		}
+
+    .btn_page:hover{
+      background-color:  #c71306 ;
+    }
+
+    
+  .loading {
+    width: 10vw;
+  }
+  
+  .rotated{
+    animation-name: rotation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform:rotateY(0deg);
+    }
+    100% {
+      transform:rotateY(360deg);
+    }
+  }
+  

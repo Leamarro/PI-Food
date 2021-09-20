@@ -1,0 +1,59 @@
+
+.container{
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    background-image: url("https://s1.1zoom.me/big3/497/394307-svetik.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+ }
+ .divH1{
+     align-self: center;
+     margin-top: 50px;
+ }
+ .h1:hover{
+     background-color: black;
+     border-radius: 10px;
+ }
+ .h1{
+     text-align: center;
+     font-family: 'Oswald', Helvetica, sans-serif;
+     margin: 0px;
+     line-height: 1.25; 
+     font-size: 40px; 
+     font-weight: absolute;
+     background-color:transparent;
+     color:white;
+     border-width: 10px;
+     transition: 0.3s;
+ }
+ .button{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 15px;
+        margin-top: 247px;
+        margin-right: 200px;
+        background-color: transparent;
+        color: black;
+        border-radius: 15px;
+        border: 2px solid gray;
+        padding: 12px 20px;
+        cursor: pointer;
+
+ }
+ .button:hover{
+     background-color: grey;
+     color: white;
+ }
+ .divButton{
+     align-self:center;
+ }
+ .footer{
+     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+     font-size: 15px;
+     color: black;
+     align-self: center;
+     margin-left: 380px;
+     margin-top: 200px;
+ }
