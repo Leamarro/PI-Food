@@ -6,6 +6,7 @@ import LandingPage from "./components/LandingPage/LandingPage";
 import Navbar from './components/Navbar/Navbar';
 import Form from './components/Form/Form.js';
 import Details from './components/Detail/Details';
+import About from './About/about';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route exact path='/home' component={HomePage} />
       <Route exact path='/create' component={Form} />
       <Route exact path='/recipes/:id' component={Details} />
+      <Route exact path='/about' component={About} />
       </React.Fragment>
       
     </div>

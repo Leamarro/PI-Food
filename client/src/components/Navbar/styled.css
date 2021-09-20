@@ -14,7 +14,16 @@
 .link{
     color: white;
 }
-
+.link1{
+    color: white;
+    font-size:xx-large;
+    margin-top: -5px;
+}
+.link1:hover{
+    color:  #df7711 ;
+    transform: scale(1.15);
+    transition: 0.5s;
+}
 .link:hover{
     color:  #df7711 ;
     transform: scale(1.15);
