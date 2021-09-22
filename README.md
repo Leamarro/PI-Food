@@ -1,6 +1,6 @@
 # App Food
 
-<img src='./img/landingPage.png' />
+<img src='./client/src/img/landingPage.png' />
 
 ## Search and Create your Recipes!
 Aplicación a través de la cual se pueden ver distintas recetas de comida junto con información relevante de las mismas utilizando la api externa [spoonacular](https://spoonacular.com/food-api) y a partir de ella poder, entre otras cosas:
