@@ -22,7 +22,7 @@ __Pagina inicial__: landing page que contiene
 - [ ] La imagen de fondo representativa al proyecto
 - [ ] Botón para ingresar al home (`Ruta principal`)
 
-<img src='./images/landingPage.png' />
+<img src='./client/src/img/landingPage.png' />
 
 __Ruta principal__: con
 - [ ] Input de búsqueda para encontrar recetas por nombre
@@ -34,7 +34,7 @@ __Ruta principal__: con
 - [ ] Botones/Opciones para ordenar tanto ascendentemente como descendentemente las recetas por orden alfabético y por puntuación
 - [ ] Paginado para ir buscando y mostrando las siguientes recetas
 
-<img src='./img/homePage.png' />
+<img src='./client/src/img/homePage.png'' />
 
 
 __DATOS__: Dentro de la Ruta Principal se muestran tanto las recetas traidas desde la API como así también las de la base de datos.
@@ -46,7 +46,7 @@ __Ruta de detalle de receta__: contiene
 - [ ] Nivel de "comida saludable"
 - [ ] Paso a paso
 
-<img src='./img/detailPage.png' />
+<img src='./client/src/img/detailPage.png' />
 
 __Ruta de creación de recetas__: contiene
 - [ ] Un formulario __controlado__ con los siguientes campos
@@ -58,7 +58,7 @@ __Ruta de creación de recetas__: contiene
 - [ ] Posibilidad de seleccionar/agregar uno o más tipos de dietas
 - [ ] Botón/Opción para crear una nueva receta
 
-<img src='./img/formPage.png' />
+<img src='./client/src/img/formPage.png' />
 
 #### Base de datos
 
