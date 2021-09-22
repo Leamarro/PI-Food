@@ -1,0 +1,27 @@
+.contact{
+    margin-top: 50px;
+    margin-left: 350px;
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+
+a {
+    color: rgb(10, 10, 10);
+    text-decoration: none;
+  }
+
+  .tag:hover{
+    transform: scale(1.05);
+        transition: 0.5s;
+  }
+
+  .contactInfo {
+    width: fit-content;
+    margin-left: 180px;
+  }
+

@@ -267,7 +267,7 @@ const HomePage = () => {
 								<option value='des'>Z-A</option>
 							</select>
 
-							<span>Order: </span>
+							<span>Score Order: </span>
 							<select onChange={handleSort}>
 								<option default value=''></option>
 								<option value='high'>High</option>

@@ -1,16 +1,16 @@
 .form-container {
-	margin-top: 70px;
+	margin-top: 10px;
 	align-items: center;
 	justify-content: center;
 }
 
 .form-div{
-	background-color: rgb(255, 255, 255);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	color: rgb(34, 34, 34);
     list-style: none;
+
 }
 
 .form-items {
@@ -60,7 +60,10 @@ textarea::placeholder {
 }
 
 .diets-container label {
+	display: flex;
+	flex-direction: row;
 	margin-right: 15px;
+	
 }
 
 
@@ -85,7 +88,7 @@ textarea::placeholder {
 }
 
 .btn-create:hover {
-	background-color: #cbf3f0;
+	background-color: #ffbf69;
 	color: #541509;
 }
 
@@ -103,7 +106,7 @@ textarea::placeholder {
 
 .btn-reset:hover {
 	background-color: #ffbf69;
-	color: #ebebeb;
+	color: red;
 }
 
 p.danger {

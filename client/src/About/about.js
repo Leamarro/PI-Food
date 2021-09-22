@@ -4,14 +4,16 @@ import Express from "../../src/img/express.png"
 import Redux from "../../src/img/redux.png"
 import react from "../../src/img/react.png"
 import Node from "../../src/img/node.png"
+import './about.css'
 
 function About() {
   return (
-    <div>
+    <div className = "background">
+    <div className="all">
       <h1>About this website:</h1>
       <h4>
       This website is part of my individual Henry project.
-      Bring data from the following {" "} <a href="https://restcountries.eu/">API. </a> 
+      Bring data from the following {" "} <a href="https://spoonacular.com/food-api/docs" target="_blank">API. </a> 
         PostgreSQL was used for the database. Express and Node for the back-end and React/Redux
       for the fort-end. The styles were made with css
       </h4>
@@ -32,6 +34,7 @@ function About() {
           <img src={Node} alt="img5" width="80" height="50" className="pernIcon" />
         </a>
       </div>
+    </div>
     </div>
   );
 }

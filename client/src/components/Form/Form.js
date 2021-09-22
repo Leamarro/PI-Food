@@ -172,7 +172,7 @@ const Form = () => {
             id="summary"
             value={form.summary}
             onChange={handleChange}
-            placeholder="🫕Summary"
+            placeholder="Summary"
             className={error.summary & 'danger'}
 
           ></textarea>
