@@ -1,20 +1,22 @@
-/* .caja{
-  background-image:url("https://jacomeyortiz.com/wp-content/uploads/2019/02/wood-2142241_1920.jpg");
-} */
-
-.filter-sort {
+.filterSort {
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: #DAA381;
     height: 10vh;
   }
-  
-  .filter-sort span {
+
+  .filterSort option{
+    background-color: #DAA381;
+ 
+  }
+ 
+ 
+  .filterSort span {
     margin-right: 3px;
   }
 
-  .filter-sort select {
+  .filterSort select {
     height: 4vh;
     margin-right: 1.5rem;
     height: 2.68vw;
@@ -22,7 +24,7 @@
     border-radius: 10px;
   }
   
-  .filter-select {
+  .filterSelect {
     width: 15vw ;
     height: 3vw ;
     font-family:Arial, Helvetica, sans-serif;
@@ -57,7 +59,7 @@ select option{
     display: none;
 }
 
-  .recipes-home {
+  .recipesHome {
     display: grid;
     grid-template-columns: repeat(3, 450px);
     justify-content: space-between;
@@ -78,17 +80,17 @@ select option{
     transform: translate(250%,300%);
   }
 
-  .num-page {
+  .numPage {
     font-size: 2rem;
     color: #5c595b;
     padding-right: 45px;
     padding-left: 45px;
   }
   
-  .div_btn {
+  .divBtn {
 		display: flex;
 	}
-		.btn_page {
+		.btnPage {
       font-family: 'Rubik', sans-serif;
       font-weight: 500;
       background-color:  #800a05;
@@ -99,7 +101,7 @@ select option{
       width: 55px;
 		}
 
-    .btn_page:hover{
+    .btnPage:hover{
       background-color:  #c71306 ;
     }
 

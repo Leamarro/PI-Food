@@ -1,22 +1,22 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import './styled.css';
+import style from './styled.module.css';
 import {GiFruitBowl} from 'react-icons/gi'
 
 export default function Navbar() {
     return (
       
-    <div className="navbar">
-        <nav className="navbar-right"> 
-        <ul className='list'>
-            <li className='list-item'>    
-                <Link to='/' className="link1">
+    <div className={style.navbar}>
+        <nav className={style.navbarRight}> 
+        <ul className={style.list}>
+            <li className={style.listItem}>    
+                <Link to='/' className={style.link1}>
                 <GiFruitBowl></GiFruitBowl>
                 </Link>   
-                <Link to='/home' className='link'>Home</Link>
-                <Link to='/create' className='link'>Create Recipe</Link>   
-                <Link to='/about' className='link'>About</Link>  
-                <Link to='/contact' className='link'>Contact</Link>  
+                <Link to='/home' className={style.link}>Home</Link>
+                <Link to='/create' className={style.link}>Create Recipe</Link>   
+                <Link to='/about' className={style.link}>About</Link>  
+                <Link to='/contact' className={style.link}>Contact</Link>  
                 </li>
             </ul>
     </nav>

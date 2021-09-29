@@ -14,8 +14,6 @@ router.get('/', async (req, res) => {
        const recipes = await allRecipes();
        let value = name.toLowerCase();
 
-       //console.log(recipes);
-
        const busqueda = recipes.filter(r => r.title.toLowerCase().includes(value));
        console.log(busqueda);
 
@@ -33,7 +31,7 @@ router.get('/:id', async(req, res) => {
     const { id } = req.params;
 
     if (!id) return res.status(404).send("Error, recipeId not found");
-    //if(id.includes('-')) return res.send('entro aca porque incluye -')
+
         if (id.includes('-')) {
         //busco en la DB por Id
         const db = await recipesDb();

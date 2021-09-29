@@ -9,10 +9,10 @@ import Card from '../Card/Card.js';
 import Loading from '../Loading';
 import Search from '../Search/Search.js';
 
-import './home.css';
+import style from './home.module.css';
 
 
-const HomePage = () => {
+export default function HomePage() {
     
     const dispatch = useDispatch();
 
@@ -254,11 +254,11 @@ const HomePage = () => {
 	]);
 
     return (
-    <div className='caja'>
+    <div className={style.caja}>
         
         <div>
 				<div>
-					<div className='filter-sort'>
+					<div className={style.filterSort}>
 						<div>
 							<span>Sort: </span>
 							<select onChange={handleSort}>
@@ -276,7 +276,7 @@ const HomePage = () => {
 
 							<span>Filter: </span>
 							<select
-								className='filter-select'
+								className={style.filterSelect}
 								onChange={(e) => setFilter(e.target.value)}
 							>
 								<option default value=''>
@@ -302,7 +302,7 @@ const HomePage = () => {
 					</div>
 				</div>
 			</div>
-			<div className='recipes-home'>
+			<div className={style.recipesHome}>
 				{loading ? (
 					<div>
 						<Loading
@@ -325,13 +325,13 @@ const HomePage = () => {
 					<h1>Recipes not found! Try again.</h1>
 				)}
 			</div>
-			<div className='pagination'>
-				<div className="div_btn">
-				<button className='btn_page' onClick={previous}>
+			<div className={style.pagination}>
+				<div className={style.divBtn}>
+				<button className={style.btnPage} onClick={previous}>
 				<ArrowBackIosIcon />
 				</button>
-				<span className='num-page'>{page}</span>
-				<button className='btn_page' onClick={next}>
+				<span className={style.numPage}>{page}</span>
+				<button className={style.btnPage} onClick={next}>
 				<ArrowForwardIosIcon />
 				</button>
 				</div>
@@ -340,5 +340,3 @@ const HomePage = () => {
        </div>
     );
 }
-
-export default HomePage;

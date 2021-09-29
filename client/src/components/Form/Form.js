@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getRecipes, getDiets } from "../../actions/index";
+import {  getDiets } from "../../actions/index";
 import swal from 'sweetalert';
 
-import './form.css';
+import style from './form.module.css';
 import SendIcon from '@material-ui/icons/Send';
 import DeleteIcon from '@material-ui/icons/Delete';
 
@@ -24,21 +24,21 @@ const formData = {
 export const validate = (recipe) => {
   let error = {};
 
-  if (!recipe.title) error.title = "title required";
-  if (!recipe.summary) error.summary = "summary required";
+  if (!recipe.title) error.title = "Title required";
+  if (!recipe.summary) error.summary = "Summary required";
   
-  if (!recipe.instructions) error.instructions = "type an instruction";
+  if (!recipe.instructions) error.instructions = "Tsype an instruction";
 
-  if (!/^([0-9])*$/.test(recipe.spoonacularScore)) error.spoonacularScore = "spoonacularScore is not a number";
+  if (!/^([0-9])*$/.test(recipe.spoonacularScore)) error.spoonacularScore = "SpoonacularScore is not a number";
   else if (recipe.spoonacularScore < 0 || recipe.spoonacularScore > 100)
-    error.spoonacularScore = "spoonacularScore must be between 0 and 100";
+    error.spoonacularScore = "SpoonacularScore must be between 0 and 100";
 
   if (!/^([0-9])*$/.test(recipe.healthScore))
-    error.healthScore = "healthScore is not a number";
+    error.healthScore = "HealthScore is not a number";
   else if (recipe.healthScore < 0 || recipe.healthScore > 100)
-    error.healthScore = "healthScore must be between 0 and 100";
+    error.healthScore = "HealthScore must be between 0 and 100";
 
-  if (recipe.diets.length === 0) error.diet = "select at least one diet";
+  if (recipe.diets.length === 0) error.diet = "Select at least one diet";
 
   return error;
 };
@@ -96,7 +96,7 @@ const Form = () => {
 
         //console.log("formulario correcto");
         
-        axios.post('http://localhost:3002/recipe', form)
+        axios.post('http://localhost:3001/recipe', form)
 
         //console.log("se envio la receta");
         swal({
@@ -125,12 +125,12 @@ const Form = () => {
   };
 
   return (
-    <div className='form-main-container'>
-      <div className='form-container'>
+    <div className={style.formMainContainer}>
+      <div className={style.formContainer}>
         
-      <form className='form-div'>
-      <div className='form-items'>
-      <h1 className='form-title'>Create your own recipe!</h1>
+      <form className={style.formDiv}>
+      <div className={style.formItems}>
+      <h1 className={style.formTitle}>Create your own recipe!</h1>
           <p className={error.title ? 'danger' : 'pass'}>{error.title}</p>
           <input
             type="text"
@@ -187,7 +187,7 @@ const Form = () => {
           ></textarea>
           </div>
           
-          <div className='diets-container'>
+          <div className={style.dietsContainer}>
               
             {diets.length > 0 &&
                 diets.map((diet) => (
@@ -196,7 +196,7 @@ const Form = () => {
 												.toLowerCase()
 												.replace(' ', '')
 												.replace('-', '')}
-                        className='text-label'
+                        className={style.textLabel}
 										>
                    
 											<input
@@ -215,9 +215,9 @@ const Form = () => {
 										</label>
                 )) }
           </div>
-       <div className='form-buttons'>
-        <button onClick={handleReset} className='btn-reset'> <DeleteIcon /> </button>
-        <button onClick={handleSubmit} className='btn-create'> <SendIcon /> </button>
+       <div className={style.formButtons}>
+        <button onClick={handleReset} className={style.btnReset}> <DeleteIcon /> </button>
+        <button onClick={handleSubmit} className={style.btnCreate}> <SendIcon /> </button>
         </div>
       </form>
       </div>

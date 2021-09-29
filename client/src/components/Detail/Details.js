@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector  } from 'react-redux';
-import { getRecipesId, getDiets } from '../../actions/index';
+import { getRecipesId} from '../../actions/index';
 import {Link} from 'react-router-dom'
 import chef from '../../img/chef.png';
-import './details.css'
+import style from './details.module.css'
 import {BiArrowBack} from 'react-icons/bi'
 
 import Loading from '../Loading';
@@ -25,17 +25,17 @@ export default function Detail({
 	}, [dispatch, id]);
 
 	return (
-		<div className='caja'>
+		<div className={style.caja}>
 				{loading ? (
 					<Loading />
 				) : recipe.title ? (
-					<div className='recipe-container'>
-					<div className="container-div">
-					<Link to= '/home' className="flecha"><BiArrowBack></BiArrowBack></Link>
-						<h1 className='detail-title'>{recipe.title}</h1>
-						<div className='detail-container'>
+					<div className={style.recipeContainer}>
+					<div className={style.containerDiv}>
+					<Link to= '/home' className={style.flecha}><BiArrowBack></BiArrowBack></Link>
+						<h1 className={style.detailTitle}>{recipe.title}</h1>
+						<div className={style.detailContainer}>
                             {recipe.img ? <img src={recipe.img} alt="not found1" /> : <img src={chef} alt="not found2" />}
-								<div className='detail-scores'>
+								<div className={style.detailScores}>
 									<h2>
 										{recipe.score && 
 											`Score: ${recipe.score} Points`}
@@ -45,14 +45,14 @@ export default function Detail({
 											`HealthScore: ${recipe.healthScore}%`}
 									</h2>
 								</div>
-								<div className='detail-diets'>
+								<div className={style.detailDiets}>
                                     {recipe.diets && 
 									recipe.diets.map(d => <h2> {d} </h2>
                                     )}
 								</div>
-							<div className='detail-recipe'>
+							<div className={style.detailRecipe}>
 								<h2>{recipe.summary && 'Summary'}</h2>
-								<div className='detail-summary'>
+								<div className={style.detailSummary}>
 									<p
 										dangerouslySetInnerHTML={{
 											__html: recipe.summary,
@@ -60,7 +60,7 @@ export default function Detail({
 									/>
 								</div>
 								<h2>{recipe.instructions && 'Instructions'}</h2>
-								<div className='detail-recipe'>
+								<div className={style.detailRecipe}>
 									<p
 										dangerouslySetInnerHTML={{
 											__html: recipe.instructions,

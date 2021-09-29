@@ -1,12 +1,11 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BsStarFill, BsHeartFill, BsHeartHalf, BsHeart, BsStarHalf, BsStar } from 'react-icons/bs'
 
 import recipeImg from '../../img/recipeImg.png';
-import './card.css';
+import style from './card.module.css';
 
-const Card = ({ id, title, score, healthScore, image, diets }) => {
+export default function Card ({ id, title, score, healthScore, image, diets }) {
 
     //console.log('dietas de la card', diets );
     let scoreStar = [];
@@ -39,31 +38,31 @@ const Card = ({ id, title, score, healthScore, image, diets }) => {
 	}
 
     return (
-    <div className='container'>
-        <Link className='link' to={`/recipes/${id}`}>
-            <div className='card' >
-                <div className='card-image'>
-                {image ? <img src={image} alt="not found" /> : <img src={recipeImg} alt='recipe' className='card-image'/>  } 
+    <div className={style.container}>
+        <Link className={style.link} to={`/recipes/${id}`}>
+            <div className={style.card} >
+                <div className={style.cardImage}>
+                {image ? <img src={image} alt="not found" /> : <img src={recipeImg} alt='recipe' className={style.cardImage}/>  } 
                 </div>
 
-                <div className='card-text' >
-                <h1 className="title">{title}</h1>
+                <div className={style.cardText} >
+                <h1 className={style.title}>{title}</h1>
 
-                <h4 className='card-diets'>{getDiets()}</h4>
+                <h4 className={style.cardDiets}>{getDiets()}</h4>
                      </div>
 
-                    <div className='card-stats'>
-                    <div className='stat'>
+                    <div className={style.cardStats}>
+                    <div className={style.stat}>
                         {scoreStar.map(e => <BsStarFill />)}
                         {(score % 10 > 0) && <BsStarHalf />}
                         {scoreStarTotal.map(e => <BsStar />)}
-                        <p className='text-stats'>Score: {score}</p>
+                        <p className={style.textStats}>Score: {score}</p>
                     </div>
-                    <div className="stat" >
+                    <div className={style.stat} >
                         {scoreHeart.map(e => <BsHeartFill />)}
                         {(healthScore % 10 > 0) && <BsHeartHalf />}
                         {scoreHeartTotal.map(e => <BsHeart />)}
-                        <p className='text-stats'>Health Score: {healthScore}</p>
+                        <p className={style.textStats}>Health Score: {healthScore}</p>
                     </div>
                     
                 </div>
@@ -72,5 +71,3 @@ const Card = ({ id, title, score, healthScore, image, diets }) => {
     </div>
     );
 };
-
-export default Card;

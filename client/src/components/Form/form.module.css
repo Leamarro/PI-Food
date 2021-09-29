@@ -1,10 +1,10 @@
-.form-container {
+.formContainer {
 	margin-top: 10px;
 	align-items: center;
 	justify-content: center;
 }
 
-.form-div{
+.formDiv{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -13,23 +13,23 @@
 
 }
 
-.form-items {
+.formItems {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-.form-items input {
+.formItems input {
 	height: 40px;
 	width: 100%;
 	margin: 10px;
 }
 
-.form-items input::placeholder{
+.formItems input::placeholder{
 	font-size: 20px;
 }
 
-.form-items textarea {
+.formItems textarea {
 	height: 100px;
 	width: 100%;
 	margin: 10px;
@@ -40,26 +40,26 @@ textarea::placeholder {
 }
 
 
-.form-title {
+.formTitle {
 	color: #541509;
 	margin-bottom: 30px;
 	font-size: 50px;
 }
 
-.form-buttons {
+.formButtons {
 	display: flex;
 	justify-content: center;
 	margin-top: 1rem;
 }
 
-.diets-container {
+.dietsContainer {
 	display: inline;
     width: 39%;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
 
-.diets-container label {
+.dietsContainer label {
 	display: flex;
 	flex-direction: row;
 	margin-right: 15px;
@@ -74,7 +74,7 @@ textarea::placeholder {
 	padding-left: 10px;
 }
 
-.btn-create {
+.btnCreate {
 	font-family: 'Rubik', sans-serif;
 	font-weight: 500;
 	background-color: #541509;
@@ -87,12 +87,12 @@ textarea::placeholder {
 	margin-left: 3rem;
 }
 
-.btn-create:hover {
+.btnCreate:hover {
 	background-color: #ffbf69;
 	color: #541509;
 }
 
-.btn-reset {
+.btnReset {
 	font-family: 'Rubik', sans-serif;
 	font-weight: 500;
 	background-color: #E91B0D;
@@ -104,7 +104,7 @@ textarea::placeholder {
 	height: 7vh;
 }
 
-.btn-reset:hover {
+.btnReset:hover {
 	background-color: #ffbf69;
 	color: red;
 }
