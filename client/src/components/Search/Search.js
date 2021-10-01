@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { getRecipesName, switchLoading } from '../../actions/index.js';
+import { getRecipesName} from '../../actions/index.js';
 import SearchIcon from '@material-ui/icons/Search';
 import './search.css'
 
@@ -15,7 +15,6 @@ export default function Search({ setSearch }) {
 	function handleSubmit(e) {
 		if (nameRecipe) {
 			e.preventDefault();
-			dispatch(switchLoading(true));
 			dispatch(getRecipesName(nameRecipe));
 			setSearch(true);
 			setNameRecipe('');

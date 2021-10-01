@@ -98,24 +98,28 @@ export default function HomePage() {
 				});
 				setFilteredRecipes(des);
 			}
+
+			
 			if (e.target.value === 'high') {
 				const high = [...filteredRecipes].sort((a, b) => {
-					return (a.score || a.spoonacularScore) <
-						(b.score || b.spoonacularScore)
+					return (a.score) <
+						(b.score )
 						? 1
 						: -1;
 				});
 				setFilteredRecipes(high);
 			}
+
 			if (e.target.value === 'low') {
 				const low = [...filteredRecipes].sort((a, b) => {
-					return (a.score || a.spoonacularScore) >
-						(b.score || b.spoonacularScore)
+					return (a.score ) >
+						(b.score )
 						? 1
 						: -1;
 				});
 				setFilteredRecipes(low);
 			}
+
 		} else if (searchRecipes.length && search) {
 			if (e.target.value === 'asc') {
 				const asc = [...searchRecipes].sort((a, b) => {
@@ -126,8 +130,8 @@ export default function HomePage() {
 				setRecipes(asc);
 			}
 			if (e.target.value === 'des') {
-				const des = [...searchRecipes].sort((a, b) => {
-					return a.title.toLowerCase() < b.title.toLowerCase()
+				const des = [...searchRecipes].reverse((a, b) => {
+					return a.title.toLowerCase() > b.title.toLowerCase()
 						? 1
 						: -1;
 				});
@@ -135,8 +139,8 @@ export default function HomePage() {
 			}
 			if (e.target.value === 'high') {
 				const high = [...searchRecipes].sort((a, b) => {
-					return (a.score || a.spoonacularScore) <
-						(b.score || b.spoonacularScore)
+					return (a.score) <
+						(b.score)
 						? 1
 						: -1;
 				});
@@ -144,8 +148,8 @@ export default function HomePage() {
 			}
 			if (e.target.value === 'low') {
 				const low = [...searchRecipes].sort((a, b) => {
-					return (a.score || a.spoonacularScore) >
-						(b.score || b.spoonacularScore)
+					return (a.score) >
+						(b.score)
 						? 1
 						: -1;
 				});
@@ -170,8 +174,7 @@ export default function HomePage() {
 			}
 			if (e.target.value === 'high') {
 				const high = [...allRecipes].sort((a, b) => {
-					return (a.score || a.spoonacularScore) <
-						(b.score || b.spoonacularScore)
+					return (a.score) <(b.score)
 						? 1
 						: -1;
 				});
@@ -179,8 +182,7 @@ export default function HomePage() {
 			}
 			if (e.target.value === 'low') {
 				const low = [...allRecipes].sort((a, b) => {
-					return (a.score || a.spoonacularScore) >
-						(b.score || b.spoonacularScore)
+					return (a.score ) >(b.score)
 						? 1
 						: -1;
 				});
@@ -212,6 +214,7 @@ export default function HomePage() {
 			setPage(page - 1);
 		}
 	};
+
 
 	useEffect(() => {
 		if (search) {
